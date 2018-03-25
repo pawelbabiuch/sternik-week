@@ -13,7 +13,8 @@ public class HelloServlet extends HttpServlet{
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
 		String param1 = req.getParameter("param1");
-		resp.getOutputStream().println("Hura moj pierwszy post! z param = " + param1);
+		resp.setContentType("text/html; charset=UTF-8");
+		resp.getOutputStream().println("Hura mój pierwszy post! z param = " + param1);
 	}
 	
 	@Override
