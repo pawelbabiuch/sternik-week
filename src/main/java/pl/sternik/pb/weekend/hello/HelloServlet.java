@@ -11,7 +11,9 @@ public class HelloServlet extends HttpServlet{
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
+		
+		String param1 = req.getParameter("param1");
+		resp.getOutputStream().println("Hura moj pierwszy post! z param = " + param1);
 	}
 	
 	@Override
